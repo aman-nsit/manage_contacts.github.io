@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title><%= title%></title>  <!-- <%= %> used where we have to print variable not directly written code.  -->
+    <script src="https://kit.fontawesome.com/f44083ec30.js" crossorigin="anonymous"></script> 
+    <!-- always use another css file above yours. -->
+     <link rel="stylesheet" href="/css/home.css"> <!-- this has to be done using app.use(assets)  (middleware) -->
+</head>
+<body>
+    <h1><i class="fa-regular fa-address-book"></i>
+        Fill This Form To Add Your Contact.</h1>
+    <div id="container">
+    <ul>
+        <% for(let i of contact_list){ %>    <!-- = not required if we not have to print and write some code not to print but use as program--> 
+            <li class="contact">
+                <div class="details"> 
+                    
+                    <p> <%= i.name %></p>
+                    <p> <%= i.phone %></p>
+                    
+                </div>
+            
+               <div class="delete-contact">
+                <!-- <a href="/delete-contact/?phone=<%= i.phone%>">  <i class="fa-solid fa-delete-left"></i> </a>  <i> provide icon link 
+                 ex- can also give more than on value   <a href="/delete-contact/?phone=<%= i.phone%> & ?name=<%=i.name%>"></a> automatically convert to url (space will convert to some char )
+                            here this link contain query parameter and when we process it using controller then this url change into the query /data   -->
+                <a href="/delete-contact/?id=<%= i._id%>">  <i class="fa-solid fa-delete-left"></i> </a>   
+            </div>
+        </li>
+              <% } %>
+        </ul>  
+    </div>
+<form action="/create_contact" method="POST">     
+    <input type="text" name="name" placeholder="Enter Your Name" required>  <!--this are key value pair name : .....  phone :......    !--> 
+    <input type="text" name="phone" placeholder="Phone No." required>          
+    <button type="submit" id="but">Add Your Contact To List </button>
+</form>
+<script type="text/javascript " src="/js/home.js"></script>   <!-- this has to be done using app.use(assets)  (middleware) -->
+</body>
+</html>

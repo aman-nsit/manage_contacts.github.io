@@ -1,0 +1,87 @@
+/* 
+body{
+    margin: 0;
+    text-align: center;
+    background-color: bisque;
+}
+.list-container{
+    text-align: center;
+    display: flex;
+    background-color:lightcoral; 
+
+}
+/* ul{
+    list-style: none;
+}
+p{
+    padding-left: 10px;
+}
+.delete-contact{
+   
+     margin-left: 0; 
+     margin-bottom: 0;
+} 
+/* i{
+    color: brown;
+
+}
+.contact p{
+    margin: 5px 0;
+} */ 
+body{
+    background-image: url("back.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+h1{
+    margin-top: 30px;
+    color:brown;
+    padding: 40px;
+}
+#container{
+    margin-left: 33%;
+    width:30%;
+}
+#container ul{
+    
+    padding: 0;
+    list-style: none;
+}
+.contact{
+    padding: 3px 10px;
+    border: 1px solid burlywood;
+    background-color:khaki;
+    box-shadow: 1px 1px 1px 1px brown;
+    color: brown;
+    display: flex;
+}
+ .details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    padding: 3px;
+
+}
+ .delete-contact{
+    width: 10%;
+    padding: 3px;
+    text-align: center;
+    margin-top: 5px;
+}
+.delete-contact a{
+    color: brown;
+}
+.contact p{
+    margin :5px 0;
+     font-weight: 600 ;
+}
+
+#but{
+    background-color:khaki;
+    color: brown;
+}

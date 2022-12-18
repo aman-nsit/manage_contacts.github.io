@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+</head>
+<body>
+    <h1>This is EJS view !</h1>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= title%></title>
+    </head>
+    <body>
+        <h1>This is EJS view !</h1>
+        <ul>
+            <% for(let i=0;i<6;i++){ %>    <!-- =not required if we not have to print and wriye some code not to print but use as program--> 
+               <li> <%= i %></li>
+                <% } %>
+        </ul>
+        <% if(true) { %>
+            <h1> TRUE!!</h1> <!-- if we have to write something direct not need <%= %> -->
+            <% }else{%>
+                <h1>FALSE!!</h1>
+                <% } %>
+        <ul>
+        <% for(let i of contact_list){ %>    <!-- =not required if we not have to print and wriye some code not to print but use as program--> 
+            <li><p> <%= i.name %></p>
+               <p> <%= i.phone %></p>
+            </li>
+            <% } %>
+        </ul>       
+    </body>
+    </html>       
+</body>
+</html>
