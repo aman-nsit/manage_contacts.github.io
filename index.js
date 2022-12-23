@@ -1,4 +1,3 @@
-
 const express =require('express');
 const path=require('path');  //not require to install path, it is inbuilt function   used to set path (like in .set(views)
 
